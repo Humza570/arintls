@@ -1,11 +1,18 @@
-export default function StubPage() {
+import NewsHero from '@/components/news/NewsHero';
+import NewsGrid from '@/components/news/NewsGrid';
+import NewsletterSignup from '@/components/news/NewsletterSignup';
+
+export const metadata = {
+  title: 'News & Insights | ARINTLS',
+  description: 'Market intelligence, regulatory updates, and strategic perspectives for leaders navigating international expansion in South and Southeast Asia.',
+};
+
+export default function NewsPage() {
   return (
-    <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", paddingTop: "80px" }}>
-      <div style={{ textAlign: "center" }}>
-        <p style={{ fontFamily: "'Syne', sans-serif", fontSize: "10px", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "16px" }}>Coming Soon</p>
-        <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(40px,6vw,80px)", fontWeight: 300, color: "var(--cream)" }}>Page Under Construction</h1>
-        <p style={{ color: "var(--muted)", marginTop: "16px", fontFamily: "'DM Sans', sans-serif", fontSize: "14px" }}>This page is being built. Check back soon.</p>
-      </div>
-    </div>
+    <main>
+      <NewsHero />
+      <NewsGrid />
+      <NewsletterSignup />
+    </main>
   );
 }
